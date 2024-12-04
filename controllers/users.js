@@ -53,7 +53,7 @@ const login = async (req, res) => {
  */
 
 /* users registration */
-const register = async (req, res) => {
+const register = async (req, res, next) => {
   const { email, password, name } = req.body;
   //error checking
   if (!email || !password || !name) {
@@ -103,8 +103,17 @@ const register = async (req, res) => {
     return res.status(400).json({ message: "failed to create user" });
   }
 };
+
+/**
+ *
+ * @route GET /api/user/current
+ * @desc Current User
+ * @access Private
+ */
+
+/* Get the user from the middleware auth.js*/
 const current = async (req, res) => {
-  res.send("current");
+  return res.status(200).json(req.user);
 };
 
 module.exports = {
