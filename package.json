@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "server": "nodemon ./bin/www"
+    "server": "nodemon ./bin/www",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "@prisma/client": "^6.0.0",
+    "@reduxjs/toolkit": "^2.5.0",
     "bcrypt": "^5.1.1",
     "concurrently": "^9.1.0",
     "cookie-parser": "~1.4.4",
@@ -15,7 +18,10 @@
     "dotenv": "^16.4.5",
     "express": "~4.16.1",
     "jsonwebtoken": "^9.0.2",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.1",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.7",
