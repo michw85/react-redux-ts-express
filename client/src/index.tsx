@@ -8,8 +8,10 @@ import {
 } from "react-router-dom";
 import { store } from "./app/store.ts";
 import reportWebVitals from "./reportWebVitals";
-import "./index.css";
 import { Paths } from "./path.ts";
+import Login from "./pages/login/index.tsx";
+import Register from "./pages/register/index.tsx";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path: Paths.login,
-    element: <h1>Login</h1>,
+    element: <Login />,
   },
   {
     path: Paths.register,
-    element: <h1>Register</h1>,
+    element: <Register />,
   },
 ]);
 
