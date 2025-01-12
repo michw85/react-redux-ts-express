@@ -10,6 +10,10 @@ body {
   background-color: #141414;
   color: white;
 }
+
+html, body, body > div {
+  height: 100%;
+}
 a {
   text-decoration: none;
 }

@@ -1,0 +1,10 @@
+.main {
+    width: 80%;
+    height: 100%;
+    margin-inline: auto;
+    color: azure;
+}
+.div {
+    background-color: blue;
+    color: white;
+  }
