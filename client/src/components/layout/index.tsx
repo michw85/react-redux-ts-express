@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className={styles.main}>
-        <AntLayout.Content style={{ height: "100%" }}>
+        <AntLayout.Content style={{ height: "100%", color: "white" }}>
           {children}
         </AntLayout.Content>
         {/* <Button type="primary">PRESS ME</Button> */}
